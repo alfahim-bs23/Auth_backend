@@ -43,12 +43,12 @@
 
 - [x] Passwords should be securely hashed (e.g., bcrypt)
 
-2. Role-Based Access Control
+3. Role-Based Access Control
 
 - [x] Define roles: admin, user
 - [x] Assign roles during registration or via seed/admin logic
 
-3. Protected Routes
+4. Protected Routes
 - [x] /admin/data — accessible only to admin
   * This will return all user list
   * Route: http://localhost:5000/admin/data
@@ -97,9 +97,9 @@
     ```
 
 
-4. Auth Guard
+5. Auth Guard
 - [x] Used custom Auth Guard to restrict route access based on user role
 
-5. Database
+6. Database
 - [x] SQLite
 - [x] Integrate with TypeORM
