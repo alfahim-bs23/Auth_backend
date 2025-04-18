@@ -7,7 +7,6 @@ import {
 
 import { Reflector } from '@nestjs/core';
 import { ROLES_KEY } from './roles.decorator';
-import { Observable } from 'rxjs';
 
 @Injectable()
 export class RolesGuard implements CanActivate{
@@ -23,7 +22,12 @@ export class RolesGuard implements CanActivate{
         }
 
         const {user}=context.switchToHttp().getRequest();
+        // console.log("admin user is=> ",user);
 
-        if(!requiredRoles.includes)
+        if(!requiredRoles.includes(user.role)){
+            throw new ForbiddenException('Access denied.');
+        }
+
+        return true;
     }
 }
