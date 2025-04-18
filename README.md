@@ -72,13 +72,34 @@
     ```
 - [x] /admin/user-details/:id - accessible only to admin
     * This will return specific user details
-    * Route:
+    * Route: http://localhost:5000/admin/user-details/:id
+    * Headers: Bearer token xyz
+    * Response:
+    ```json
+        {
+            "id": "6081fafb-73d3-430e-be09-0fca21c4e52e",
+            "email": "test@test.com",
+            "role": "user"
+        }
+    ```
 
-- [ ] /user/profile — accessible only to user role
+- [x] /user/profile — accessible only to user role
+    * This will return profile of currently loggedin user.
+    * Route: http://localhost:5000/user/profile
+    * Headers: Bearer token xyz
+    * Response:
+    ```json
+        {
+            "id": "8d25b574-b9f9-4ebb-ab77-dd0fb6f22ae5",
+            "email": "admin@test.com",
+            "role": "admin"
+        }
+    ```
+
 
 4. Auth Guard
-- [x] Use custom Auth Guard to restrict route access based on user role
+- [x] Used custom Auth Guard to restrict route access based on user role
 
 5. Database
-- [x] Use SQLite (or any relational DB)
+- [x] SQLite
 - [x] Integrate with TypeORM

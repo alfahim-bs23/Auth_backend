@@ -15,7 +15,9 @@ export class UserService {
     }
 
     findById(id:string){
-        return this.userRepo.findOne({where:{id}});
+        return this.userRepo.findOne({
+            where:{id},
+            select:['id','email','role']});
     }
 
     findByEmail(email:string){
@@ -23,6 +25,8 @@ export class UserService {
     }
 
     findAll(){
-        return this.userRepo.find();
+        return this.userRepo.find({
+            select:['id','email','role']
+        });
     }
 }
