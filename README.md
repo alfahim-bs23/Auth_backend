@@ -1,13 +1,15 @@
 ## Auth Backend.
 ### Features:
 1. Authentication
-- [x]User registration endpoint
-- [x]User login endpoint (JWT-based)
-- [x]Passwords should be securely hashed (e.g., bcrypt)
+
+- [x] User registration endpoint
+- [x] User login endpoint (JWT-based)
+- [x] Passwords should be securely hashed (e.g., bcrypt)
 
 2. Role-Based Access Control
-- [x]Define roles: admin, user
-- [x]Assign roles during registration or via seed/admin logic
+
+- [x] Define roles: admin, user
+- [x] Assign roles during registration or via seed/admin logic
 
 3. Protected Routes
 - [ ]/admin/data — accessible only to admin
