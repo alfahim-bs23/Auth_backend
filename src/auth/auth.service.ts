@@ -14,7 +14,7 @@ export class AuthService {
 
     async register(dto:RegisterDto){
         const hashedPassword = await bcrypt.hash(dto.password,10);
-        const user=await this.userService.create({
+        await this.userService.create({
             username:dto.username,
             email:dto.email,
             password:hashedPassword
